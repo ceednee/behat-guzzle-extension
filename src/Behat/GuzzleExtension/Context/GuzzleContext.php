@@ -330,7 +330,7 @@ class GuzzleContext extends RawGuzzleContext
         PyStringNode $string
     ) {
         $this->compareValues(
-            $this->getGuzzleResult(),
+            $this->getGuzzleResponse()->json(),
             json_decode($this->addStoredValues($string->getRaw()), true)
         );
     }
